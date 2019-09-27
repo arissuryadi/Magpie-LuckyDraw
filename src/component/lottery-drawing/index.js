@@ -115,7 +115,7 @@ class LotteryDrawing extends Component {
     if (!this.state.selectedParticipant.phone || (this.state.existingCountOfCurrentPrize === 0 && !this.drawService.isRolling && !this.state.isPrizeChanged)) {
       return "Menunggu Undian...";
     } else if(this.state.noPrize){
-      return "Ended Prize";
+      return "Undian Selesai, Selamat Kepada Pemenang!";
     }
     return (<div className="selectedParticipant">
       <div className="name">{this.state.selectedParticipant.name}</div>

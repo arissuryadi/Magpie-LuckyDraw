@@ -4,15 +4,15 @@ const uuidv4 = require('uuid/v4');
 const initialState = () => ({
     setting: [{
       id: uuidv4(),
-      title: '三等奖',
+      title: 'Hadiah Ketiga',
       totalCount: 3,
     },{
       id: uuidv4(),
-      title: '二等奖',
+      title: 'Hadiah Kedua',
       totalCount: 2,
     },{
       id: uuidv4(),
-      title: '一等奖',
+      title: 'Hadiah Pertama',
       totalCount: 1,
     }]
   }

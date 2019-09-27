@@ -113,7 +113,7 @@ class LotteryDrawing extends Component {
 
   getContent = () => {
     if (!this.state.selectedParticipant.phone || (this.state.existingCountOfCurrentPrize === 0 && !this.drawService.isRolling && !this.state.isPrizeChanged)) {
-      return "Waitig Prize";
+      return "Menunggu Undian...";
     } else if(this.state.noPrize){
       return "Ended Prize";
     }

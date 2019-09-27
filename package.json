@@ -60,7 +60,7 @@
     "test:intergration": "cypress run",
     "eject": "react-scripts eject",
     "electron-pack": "build -c.extraMetadata.main=build/electron.js",
-    "electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:80 && electron .\"",
     "dist:web": "yarn build",
     "dist:app": "rm -rf dist && electron-builder -mwl",
     "dist:linux": "electron-builder --linux --ia32 --x64",

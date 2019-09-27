@@ -104,7 +104,7 @@ class LotteryDrawing extends Component {
   };
   getTitle = () => {
     if (this.state.existingCountOfCurrentPrize === 0 && !this.state.isPrizeChanged) {
-      return `${this.state.currentPrize.title}(${this.state.currentPrize.totalCount}名)`
+      return `${this.state.currentPrize.title}(${this.state.currentPrize.totalCount} Nama)`
     } else if(this.state.noPrize){
       return "";
     }

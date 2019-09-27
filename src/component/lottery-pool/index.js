@@ -13,7 +13,7 @@ class LotteryPool extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      error: props.allParticipants && props.allParticipants.length > 0 ? '' : '抽奖池为空！',
+      error: props.allParticipants && props.allParticipants.length > 0 ? '' : 'Kolom tidak boleh kosong!',
       allParticipantsInput: this.props.allParticipants.map(participant => Participant.participantToString(participant)).join("\n")
     }
   }
@@ -25,11 +25,11 @@ class LotteryPool extends Component {
   render() {
     return (
       <div className="lottery-pool">
-        <header>抽奖池设置</header>
-        <section>每一行表示一名参与者（格式：‘姓名 手机号’）
+        <header>Pengaturan Kolom Pemenang</header>
+        <section>Setiap baris mewakili peserta (format: 'Nama Handphone')
           <span className={'load_demo'} >
             <FontAwesomeIcon icon={faQuestionCircle} />
-            <a onClick={this.loadDemoData}>加载示例数据</a>
+            <a onClick={this.loadDemoData}>Memuat</a>
           </span>
         </section>
         <div id="input_container">
@@ -38,7 +38,7 @@ class LotteryPool extends Component {
             type="text"
             multiple
             required
-            placeholder="郭晓 13800138000"
+            placeholder="Nama 08123456xxx"
             value={this.state.allParticipantsInput}
             onChange={(event) => this.onTextChange(event.target.value)}
             style={{ outlineColor: this.state.error ? '#ff5417' : '#50c617' }}
@@ -46,7 +46,7 @@ class LotteryPool extends Component {
           <div className={'notice_msg'}>
             {this.state.error && <span className={'err_msg'}>{this.state.error}</span>}
             {this.state.validParticipantCount &&
-            <div>参与者总数：{this.state.validParticipantCount}</div>
+            <div>Total jumlah peserta: {this.state.validParticipantCount}</div>
             }
           </div>
         </div>
@@ -110,7 +110,7 @@ class LotteryPool extends Component {
           });
         } else {
           this.setState({
-            error: '抽奖池为空！'
+            error: 'Kolom tidak boleh kosong!'
           });
         }
       })

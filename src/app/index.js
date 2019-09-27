@@ -24,7 +24,7 @@ class App extends Component {
 
   componentDidMount() {
     const serializedState = localStorage.getItem('state');
-    if (serializedState && window.confirm('是否恢复上次数据？')) {
+    if (serializedState && window.confirm('Ingin restore data terakhir?')) {
       this.store = getStore(true)
     } else {
       this.store = getStore(false)

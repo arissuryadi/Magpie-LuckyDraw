@@ -13,7 +13,7 @@ class LotterySetting extends Component {
   render() {
     return (
       <div className="lottery-setting">
-        <header>奖项设置</header>
+        <header>Pengaturan Hadiah</header>
         <section className="lottery-edit">
           <LotteryEdit/>
         </section>

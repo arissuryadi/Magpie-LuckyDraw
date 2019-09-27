@@ -85,7 +85,7 @@ class LotteryEditableItem extends React.Component {
                const items = this.props.lotteries;
                items.push({
                  id: uuidv4(),
-                 title: '幸运奖',
+                 title: 'Prize',
                  totalCount: 3,
                })
                this.props.setLottery(Object.assign([], items))
@@ -93,7 +93,7 @@ class LotteryEditableItem extends React.Component {
         >
           <FontAwesomeIcon
             icon={faPlusCircle}/>
-          添加奖项
+          Add Prize
         </div>
       </div>
     )

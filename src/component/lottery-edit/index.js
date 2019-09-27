@@ -7,8 +7,8 @@ class LotteryEdit extends React.Component {
     return (<div>
       <div className="prizes-container">
         <div className="lottery-items-header">
-          <div className="lottery-item-name">奖项</div>
-          <div className="lottery-item-count">数量</div>
+          <div className="lottery-item-name">Hadiah</div>
+          <div className="lottery-item-count">Jumlah</div>
         </div>
         <LotteryEditableTable />
       </div>

@@ -113,19 +113,19 @@ class LotteryDrawing extends Component {
 
   getContent = () => {
     if (!this.state.selectedParticipant.phone || (this.state.existingCountOfCurrentPrize === 0 && !this.drawService.isRolling && !this.state.isPrizeChanged)) {
-      return "等待开奖";
+      return "Waitig Prize";
     } else if(this.state.noPrize){
-      return "抽奖结束";
+      return "Ended Prize";
     }
     return (<div className="selectedParticipant">
       <div className="name">{this.state.selectedParticipant.name}</div>
-      <div className="phone">{maskPhone(this.state.selectedParticipant.phone, '😝😝😝😝')}</div>
+      <div className="phone">{maskPhone(this.state.selectedParticipant.phone, '🙈🙈🙈🙈')}</div>
     </div>)
   };
 
   getButton = () => {
     if (this.state.noPrize) {
-      return "抽奖结果";
+      return "Hasil";
     } else if (this.drawService) {
       return this.drawService.isRolling ? "stop" : (this.state.isPrizeChanged ? "next" : "start")
     }
@@ -147,7 +147,7 @@ class LotteryDrawing extends Component {
   componentDidMount() {
     const totalLotteryCount = this.props.lotteryDrawing.setting.reduce((sum, l) => (sum + l.totalCount), 0);
     if (this.props.allParticipants.length < totalLotteryCount) {
-      alert("奖项数大于参与者数");
+      alert("Jumlah Hadiah lebih besar dari jumlah peserta");
       this.props.history.goBack();
       return ;
     }

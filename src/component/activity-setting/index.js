@@ -18,7 +18,7 @@ class ActivitySetting extends Component {
     return (
       <div className="activity-setting">
         <div>
-          <header>活动名称</header>
+          <header>Nama Lucky Draw</header>
           <section>
             <input defaultValue={this.props.activityName} onChange={this.onNameChange.bind(this)}/>
           </section>
